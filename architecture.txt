@@ -1,0 +1,19 @@
+User Browser
+    |
+    |  HTTP (port 80)
+    v
+GKE Service (type: LoadBalancer)
+    |
+    |  routes traffic to
+    v
+Kubernetes Deployment (portfolio-app)
+    |
+    |  runs container image from
+    v
+Artifact Registry (Docker image)
+    ^
+    |
+Cloud Build (builds + pushes image from local source)
+    ^
+    |
+Local Project Folder (index.html + Dockerfile)
