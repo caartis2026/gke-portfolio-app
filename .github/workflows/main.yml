@@ -45,7 +45,7 @@ jobs:
           docker push us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.AR_REPO }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
       - name: Install GKE auth plugin
-       run: |
+        run: |
           gcloud components install gke-gcloud-auth-plugin --quiet
           echo "USE_GKE_GCLOUD_AUTH_PLUGIN=True" >> $GITHUB_ENV
      
